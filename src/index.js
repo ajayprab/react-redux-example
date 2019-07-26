@@ -1,17 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { createStore } from "redux";
+import { render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from ".components/App";
+import "./index.css";
 
-import "./styles.css";
-
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen ss!</h2>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("app")
+);
